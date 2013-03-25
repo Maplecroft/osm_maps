@@ -1,7 +1,7 @@
 osm_maps
 ========
 
-How to generate a worldwide, general purpose, tms tiled map. Based on Open Street Map and SRTM data. 
+How to generate a worldwide, general purpose, tms tiled map. Based on [Open Street Map](http://www.openstreetmap.org/) and [SRTM](http://srtm.csi.cgiar.org/) data. 
 
 ### Tools you will need to have installed:
 * [osm-bright](https://github.com/mapbox/osm-bright)
@@ -11,7 +11,7 @@ How to generate a worldwide, general purpose, tms tiled map. Based on Open Stree
 
 ### Step 1: download osm data and load it into a PostGIS database.
 
-Data download links can be found here: [Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm)
+OSM data download links can be found here: [Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm)
 For a worldwide dump: [planet](ftp://ftp.spline.de/pub/openstreetmap/pbf/)
 Save the planet.pbf to a folder with loads of space (the file is about 20Gb).
 
