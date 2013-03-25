@@ -26,7 +26,7 @@ Clone [osm-bright](https://github.com/mapbox/osm-bright).
 
 At this point you need to follow the instructions on the
 [osm-bright](https://github.com/mapbox/osm-bright) README page for setting 
-up the PostGIS database, and in particular the imposm related instructions. Short version: you will need to reference this file from the osm-bright repo: [imposm-mapping.py](https://github.com/mapbox/osm-bright/blob/master/imposm-mapping.py) 
+up the PostGIS database, and in particular the imposm related instructions. Short version: you will need to reference this file from the osm-bright repo, [imposm-mapping.py](https://github.com/mapbox/osm-bright/blob/master/imposm-mapping.py), 
 in your imposum command.
 
 With everything setup correctly, this will load the Planet.osm dump into postGIS:
