@@ -11,7 +11,7 @@ How to generate a worldwide, general purpose, tms tiled map. Based on [Open Stre
 
 ### Step 1: download osm data and load it into a PostGIS database.
 
-OSM data download links can be found here: [Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm) (for a worldwide dump: [planet](ftp://ftp.spline.de/pub/openstreetmap/pbf/)).
+OSM data download links can be found here: [Planet.osm](http://wiki.openstreetmap.org/wiki/Planet.osm). For a worldwide dump: [planet](http://ftp.spline.de/pub/openstreetmap/pbf/).
 Save the planet.pbf of choice to a folder with lots of space (the file is about 20Gb).
 
 Create and tune a new PostGIS database. For such a big database it is strongly 
