@@ -3,9 +3,11 @@ osm_maps
 
 How to generate a worldwide, general purpose, tms tiled map. Based on Open Street Map and SRTM data. 
 
-### Tools:
+### Tools you will need to have installed:
 * [osm-bright](https://github.com/mapbox/osm-bright)
 * [imposm](http://imposm.org/docs/imposm/latest/)
+* [mapproxy](http://mapproxy.org/) (with [mapnik](http://mapnik.org/))
+* [tilemill](http://mapbox.com/tilemill/)
 
 ### Step 1: download osm data and load it into a PostGIS database.
 
