@@ -1,7 +1,7 @@
 osm_maps
 ========
 
-### How to generate a worldwide, general purpose, tiled map. Based on Open Street Map and SRTM data. 
+How to generate a worldwide, general purpose, tms tiled map. Based on Open Street Map and SRTM data. 
 
 ### Tools:
 * [osm-bright](https://github.com/mapbox/osm-bright)
