@@ -29,7 +29,7 @@ At this point you need to follow the instructions on the
 up the PostGIS database, and in particular the imposm related instructions. You 
 will need to reference this file from the osm-bright repo: [imposm-mapping.py](https://github.com/mapbox/osm-bright/blob/master/imposm-mapping.py).
 
-This will hopefully load the Planet.osm dump into postGIS:
+With everything setup correctly, this will load the Planet.osm dump into postGIS:
 
 ```sh
 imposm --read --write --concurrency 6 -m imposm-mapping.py --optimize --deploy-production-tables --connection postgis://<postgres_user>:<postgres_password>@localhost/<postgis_database> ~/Downloads/osm/planet-130102.osm.pbf
