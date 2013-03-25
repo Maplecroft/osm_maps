@@ -20,14 +20,14 @@ Ubuntu the Postgresql configuration file can be found here: `/etc/postgresql/9.1
 
 Install Imposm. [Here](http://imposm.org/docs/imposm/latest/install.html) are 
 some detailed installation instructions. You might want to create a python 
-virtualenv where to install all of your python osm-project dependencies.
+virtualenv where to install all of your python osm-related dependencies.
 
 Clone [osm-bright](https://github.com/mapbox/osm-bright).
 
 At this point you need to follow the instructions on the
 [osm-bright](https://github.com/mapbox/osm-bright) README page for setting 
-up the PostGIS database, and in particular the imposm related instructions. You 
-will need to reference this file from the osm-bright repo: [imposm-mapping.py](https://github.com/mapbox/osm-bright/blob/master/imposm-mapping.py).
+up the PostGIS database, and in particular the imposm related instructions. Short version: you will need to reference this file from the osm-bright repo: [imposm-mapping.py](https://github.com/mapbox/osm-bright/blob/master/imposm-mapping.py) 
+in your imposum command.
 
 With everything setup correctly, this will load the Planet.osm dump into postGIS:
 
