@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Maple-OSM</title>
+    <meta name="description" content="Maplecroft OSM map">
+    <meta name="author" content="deciob">
+    <!--<link rel="stylesheet" href="css/styles.css?v=1.0">-->
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.css" />
+     <!--[if lte IE 8]>
+         <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5/leaflet.ie.css" />
+     <![endif]-->
+     <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
+    </head>
+  <body>
+    <div id="map" style="height: 100%; width: 100%"></div>
+    <script>
+        var map = L.map('map').setView([51.505, -0.09], 13);
+        L.tileLayer('http://maplecroft.com/map-resources/tiles/new_osm/{z}/{x}/{y}.png', {
+            attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, SRTM, Maplecroft',
+            maxZoom: 11,
+            tms: true
+        }).addTo(map);
+    </script>
+  </body>
+</html>
