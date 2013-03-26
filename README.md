@@ -43,6 +43,8 @@ all the data is correctly loaded into the database.
 
 ### Step 2: download and set-up the [SRTM](http://srtm.csi.cgiar.org/) 90m Digital Elevation Data for the entire world.
 
+Attention: `make.py` expects lots of free disk space!
+
 Note: the following steps assume that you have the relevant gdal tools correctly 
 installed on your system.
 
@@ -69,8 +71,8 @@ gdaltindex unwarp_index.shp *.tif
 Processing tools for the srtm data can be fond in the srtm folder. In particular:
 * `make.py` will prepare the colour-relief rasters.
 * `configure.py` is a configuration file for paths used in `make.py`. 
-* `make_project_frag.py' is a script to make an .mml fragment to insert into 
-tilemill's main .mml project file (the one generated from the osm-bright repo).
+* `make_project_frag.py` is a script to make an `.mml` fragment to insert into 
+tilemill's main `.mml` project file (the one generated from the `osm-bright` repo).
 
 
 
