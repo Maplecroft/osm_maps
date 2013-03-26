@@ -3,6 +3,10 @@ osm_maps
 
 How to generate a worldwide, general purpose, tms tiled map. Based on [Open Street Map](http://www.openstreetmap.org/) and [SRTM](http://srtm.csi.cgiar.org/) data. 
 
+Note: if you want to give it a go at customizing map styles in tilemill, I suggest
+applying these notes first to a small region of the world and when happy apply it to
+the whole world. This way tilemill will re-render things much faster.
+
 ### Tools you will need to have installed:
 * [osm-bright](https://github.com/mapbox/osm-bright)
 * [imposm](http://imposm.org/docs/imposm/latest/)
@@ -70,13 +74,27 @@ gdaltindex unwarp_index.shp *.tif
 
 Processing tools for the srtm data can be fond in the srtm folder. In particular:
 * `make.py` will prepare the colour-relief rasters.
-* `configure.py` is a configuration file for paths used in `make.py`. 
+* `configure.py` is a configuration file for paths used in `make.py`. This needs to be edited and the relevant folders need to be created.
 * `make_project_frag.py` is a script to make an `.mml` fragment to insert into 
 tilemill's main `.mml` project file (the one generated from the `osm-bright` repo).
 
 
+### Step 3: set-up the customized [osm-bright](https://github.com/mapbox/osm-bright) tilemill project.
 
+This is a 2 steps process.
+First we need to follow the instructions on the README file of the osm-bright repo. 
+In particular, arrived at this point, you will need to look at points 3 and 4.
+It assumes you have [tilemill](http://mapbox.com/tilemill/) up and running.
 
+Important note: tilemill mite take a very long time to render this project.
+
+One way to get tilemill up and running after successful installation: 
+```sh
+/usr/share/tilemill/index.js --server=true
+```
+
+Once you manage to see your openstreet data rendered in tilemill, we are ready to
+customize it with the srtm data.
 
 
 
