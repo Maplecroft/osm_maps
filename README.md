@@ -96,6 +96,11 @@ One way to get tilemill up and running after successful installation:
 Once you manage to see your openstreet data rendered in tilemill, we are ready to
 customize it with the srtm data.
 
+In the tilemill folder there is a sample `project.mml` file, with all the srtm layers 
+generated from `make_project_frag.py`. In `base.mml` you can find the other customization bits.
+
+In `tilemill/layers` you can find the customized shapefiles referenced in `project.mml`.
+
 
 
 
