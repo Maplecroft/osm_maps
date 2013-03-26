@@ -41,24 +41,24 @@ If disk space is needed, these can be deleted after the command terminates and
 all the data is correctly loaded into the database.
 
 
-### Step 2: download and set-up the [SRTM](http://srtm.csi.cgiar.org/) 90m Digital 
-Elevation Data for the entire world.
+### Step 2: download and set-up the [SRTM](http://srtm.csi.cgiar.org/) 90m Digital Elevation Data for the entire world.
 
-[here](http://www.ambiotek.com/srtm) you can download a kmz file that represents
+Note: the following steps assume that you have the relevant gdal tools correctly 
+installed on your system.
+
+[Here](http://www.ambiotek.com/srtm) you can download a kmz file that represents
 an overview of all the data.
 
 To download the data all at once you can try something like:
 ```sh
 wget -m ftp://anonymous@srtm.csi.cgiar.org/SRTM_v41/SRTM_Data_GeoTIFF/\* .
-
 ```
 
-This will take several hour and almost certainly will fail for some tiles. So,
-after this you will need to go back and explicitly download what is missing.
+This will take several hours and almost certainly it will fail for some tiles. So,
+after this, you will need to go back and explicitly download what is still missing.
 Something like:
 ```sh
 wget -m ftp://anonymous@srtm.csi.cgiar.org/SRTM_v41/SRTM_Data_GeoTIFF/srtm_36_02.zip .
-
 ```
 
 To create an shapefile index of what has been downloaded (after unzipping!):
