@@ -36,9 +36,41 @@ imposm --read --write --concurrency 6 -m imposm-mapping.py --optimize --deploy-p
 ```
 A detailed explanation of what is happening here can be found on the imposm [tutorial](http://imposm.org/docs/imposm/latest/tutorial.html#create-database) page.
 
-This will take some time (several hours!) and will create some big cache files. 
+This will take some time (several hours!) and will create some big cache files too. 
 If disk space is needed, these can be deleted after the command terminates and 
 all the data is correctly loaded into the database.
+
+
+### Step 2: download and set-up the [SRTM](http://srtm.csi.cgiar.org/) 90m Digital 
+Elevation Data for the entire world.
+
+[here](http://www.ambiotek.com/srtm) you can download a kmz file that represents
+an overview of all the data.
+
+To download the data all at once you can try something like:
+```sh
+wget -m ftp://anonymous@srtm.csi.cgiar.org/SRTM_v41/SRTM_Data_GeoTIFF/\* .
+
+```
+
+This will take several hour and almost certainly will fail for some tiles. So,
+after this you will need to go back and explicitly download what is missing.
+Something like:
+```sh
+wget -m ftp://anonymous@srtm.csi.cgiar.org/SRTM_v41/SRTM_Data_GeoTIFF/srtm_36_02.zip .
+
+```
+
+To create an shapefile index of what has been downloaded (after unzipping!):
+```sh
+gdaltindex unwarp_index.shp *.tif
+```
+
+Processing tools for the srtm data can be fond in the srtm folder. In particular:
+* `make.py` will prepare the colour-relief rasters.
+* `configure.py` is a configuration file for paths used in `make.py`. 
+* `make_project_frag.py' is a script to make an .mml fragment to insert into 
+tilemill's main .mml project file (the one generated from the osm-bright repo).
 
 
 
