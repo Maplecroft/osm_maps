@@ -16,9 +16,9 @@
      <script src="http://cdn.leafletjs.com/leaflet-0.5/leaflet.js"></script>
   </head>
   <body>
-    <div id="map" style="height: 100px; width: 100%"></div>
+    <div id="map" style="height: 500px; width: 100%"></div>
     <script>
-        var map = L.map('map').setView([51.505, -0.09], 13);
+        var map = L.map('map').setView([51.505, -0.09], 10);
         L.tileLayer('http://maplecroft.com/map-resources/tiles/new_osm/{z}/{x}/{y}.png', {
             attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>, SRTM, Maplecroft',
             maxZoom: 11,
